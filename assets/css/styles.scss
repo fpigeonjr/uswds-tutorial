@@ -4,6 +4,33 @@
  * MIT License
  */
 
+:root {
+  --blue-2: #{color("blue-warm-20v")};
+  --blue-3: #{color("blue-warm-30v")};
+  --blue-8: #{color("blue-warm-50v")};
+  --grape-0: #{color("violet-10v")};
+  --gray-2: #{color("gray-20")};
+  --gray-9: #{color("gray-90")};
+  --indigo-3: #{color("indigo-20v")};
+  --indigo-4: #{color("indigo-30v")};
+  --indigo-7: #{color("indigo-50v")};
+  --indigo-8: #{color("indigo-60v")};
+  --indigo-9: #{color("indigo-60v")};
+  --red-8: #{color("red-warm-50v")};
+  --red-9: #{color("red-warm-60v")};
+  --teal-1: #{color("mint-20v")};
+  --teal-3: #{color("mint-40v")};
+  --teal-5: #{color("mint-50v")};
+  --teal-7: #{color("mint-60v")};
+  --teal-9: #{color("mint-70v")};
+  --teal-2: #{color("mint-30v")};
+  --yellow-1: #{color("gold-10v")};
+  --yellow-7: #{color("gold-30v")};
+  --font-sans: #{family("sans")};
+  --font-serif: #{family("serif")};
+  --font-mono: #{family("mono")};
+}
+
 :where(html) {
   color-scheme: light;
 
@@ -21,8 +48,8 @@
   --surface-4: var(--gray-4);
 
   @media (dynamic-range: high) {
-    --link: color(display-p3 0 .5 1);
-    --link-visited: color(display-p3 .6 .2 1);
+    --link: color(display-p3 0 0.5 1);
+    --link-visited: color(display-p3 0.6 0.2 1);
   }
 }
 
@@ -45,12 +72,12 @@
   }
 }
 
-:where(html) { 
+:where(html) {
   color: var(--text-2);
   background-color: var(--surface-1);
 }
 
-:where(h1, h2, h3, h4, h5, h6, dt) { 
+:where(h1, h2, h3, h4, h5, h6, dt) {
   color: var(--text-1);
 }
 
@@ -74,9 +101,15 @@
   }
 }
 
-:focus-visible { outline-color: var(--brand); }
+:focus-visible {
+  outline-color: var(--brand);
+}
 
-*, ::before, ::after { box-sizing: border-box; }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
 * {
   background-origin: border-box;
@@ -102,12 +135,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   :focus-visible {
-    transition: outline-offset .25s var(--ease-2);
+    transition: outline-offset 0.25s var(--ease-2);
     outline-offset: 5px;
   }
 }
 
-:where(body) { 
+:where(body) {
   min-block-size: 100%;
   scrollbar-gutter: stable both-edges;
 }
@@ -117,19 +150,25 @@
   font-weight: var(--font-weight-9);
 }
 
-:is(h1) { 
-  font-size: var(--font-size-8); 
-  max-inline-size: var(--size-header-1); 
+:is(h1) {
+  font-size: var(--font-size-8);
+  max-inline-size: var(--size-header-1);
 }
 
-:is(h2) { 
-  font-size: var(--font-size-6); 
+:is(h2) {
+  font-size: var(--font-size-6);
   max-inline-size: var(--size-header-2);
 }
 
-:is(h3) { font-size: var(--font-size-5) }
-:is { font-size: var(--font-size-4) }
-:is(h5) { font-size: var(--font-size-3) }
+:is(h3) {
+  font-size: var(--font-size-5);
+}
+:is {
+  font-size: var(--font-size-4);
+}
+:is(h5) {
+  font-size: var(--font-size-3);
+}
 
 :is(h3, h4, h5, h6, dt) {
   max-inline-size: var(--size-header-3);
@@ -188,7 +227,9 @@
   padding-block: var(--size-1);
 }
 
-:where(textarea) { resize: block }
+:where(textarea) {
+  resize: block;
+}
 
 :where(input[type="checkbox"], input[type="radio"]) {
   block-size: var(--size-3);
@@ -211,13 +252,17 @@
   inline-size: var(--size-10);
 }
 
-:is(code, kbd, samp, pre) { font-family: var(--font-mono) }
-:where(:not(pre) > code, kbd) { white-space: nowrap }
+:is(code, kbd, samp, pre) {
+  font-family: var(--font-mono);
+}
+:where(:not(pre) > code, kbd) {
+  white-space: nowrap;
+}
 
-:is(pre) { 
+:is(pre) {
   white-space: pre;
   min-inline-size: 0;
-  max-inline-size: max-content; 
+  max-inline-size: max-content;
 }
 
 :where(:not(pre) > code) {
@@ -238,18 +283,28 @@
   padding-inline: var(--size-1);
 }
 
-:where(ol, ul) { padding-inline-start: var(--size-8) }
-:where(li) { padding-inline-start: var(--size-2) }
-:where(li, dd, figcaption) { max-inline-size: var(--size-content-2) }
-:where(p) { max-inline-size: var(--size-content-3) }
-:where(dt, summary) { font-weight: var(--font-weight-7) }
+:where(ol, ul) {
+  padding-inline-start: var(--size-8);
+}
+:where(li) {
+  padding-inline-start: var(--size-2);
+}
+:where(li, dd, figcaption) {
+  max-inline-size: var(--size-content-2);
+}
+:where(p) {
+  max-inline-size: var(--size-content-3);
+}
+:where(dt, summary) {
+  font-weight: var(--font-weight-7);
+}
 
 :where(dt:not(:first-of-type)) {
   margin-block-start: var(--size-5);
 }
 
-:where(small) { 
-  font-size: max(.5em, var(--font-size-0)); 
+:where(small) {
+  font-size: max(0.5em, var(--font-size-0));
   max-inline-size: var(--size-content-1);
 }
 
@@ -326,7 +381,7 @@
 /* New code by USWDS, adapted from Open Props */
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -553,11 +608,11 @@ main p a[href]:visited {
 }
 
 main p a:hover {
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 main p a:active {
-  background-color: rgba(255,255,255,.85);
+  background-color: rgba(255, 255, 255, 0.85);
 }
 
 .subhed {
@@ -566,7 +621,7 @@ main p a:active {
   padding-top: var(--size-2);
 }
 
-.terminal, 
+.terminal,
 .editor {
   font-size: var(--font-size-3);
   padding: var(--size-3);
@@ -582,7 +637,7 @@ main p a:active {
 }
 
 .editor {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255, 255, 255, 0.25);
   color: var(--gray-9);
   padding-top: var(--size-9);
   padding-bottom: var(--size-5);
@@ -673,15 +728,15 @@ footer {
 }
 
 footer a {
-  color: var(--blue-2)
+  color: var(--blue-2);
 }
 
 footer a:hover {
-  color: var(--blue-3)
+  color: var(--blue-3);
 }
 
 footer a:visited {
-  color: var(--indigo-3)
+  color: var(--indigo-3);
 }
 
 .alert {
