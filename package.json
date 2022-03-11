@@ -1,0 +1,16 @@
+{
+  "name": "uswds-tutorial",
+  "private": true,
+  "author": "USWDS",
+  "license": "CC0-1.0",
+  "scripts": {
+    "postinstall": "npm run jekyll:install",
+    "jekyll:install": "gem install bundler && bundle install",
+    "jekyll:serve": "bundle exec jekyll serve --host=localhost",
+    "start": "npm run jekyll:serve",
+    "test": "snyk test"
+  },
+  "devDependencies": {
+    "snyk": "^1.704.0"
+  }
+}
