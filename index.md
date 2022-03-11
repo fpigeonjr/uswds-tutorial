@@ -20,3 +20,4 @@ title: USWDS Tutorial
   {% include sxs/part-eight.html %}
 </main>
 {% include footer.html %}
+{% include identifier.html %}
