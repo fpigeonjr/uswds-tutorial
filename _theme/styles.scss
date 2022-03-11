@@ -27,8 +27,8 @@
 // See https://designsystem.digital.gov/components/
 
 // First import required and global packages...
-// @import 'packages/required';
-// @import 'packages/global';
+@import "packages/required";
+@import "packages/global";
 
 // Then import individual component packages...
 // @import 'packages/form-controls';
@@ -38,7 +38,7 @@
 // @import 'packages/validation';
 // @import 'packages/usa-accordion';
 // @import 'packages/usa-alert';
-// @import 'packages/usa-banner';
+@import "packages/usa-banner";
 // @import 'packages/usa-breadcrumb';
 // @import 'packages/usa-button-group';
 // @import 'packages/usa-button';
@@ -50,7 +50,7 @@
 // @import 'packages/usa-hero';
 // @import 'packages/usa-icon-list';
 // @import 'packages/usa-icon';
-// @import 'packages/usa-identifier';
+@import "packages/usa-identifier";
 // @import 'packages/usa-layout';
 // @import 'packages/usa-link';
 // @import 'packages/usa-media-block';
@@ -78,7 +78,7 @@
 // -------------------------------------
 // ...or import the complete USWDS kit
 
-@import "uswds";
+// @import "uswds";
 
 // -------------------------------------
 // Import theme custom styles
