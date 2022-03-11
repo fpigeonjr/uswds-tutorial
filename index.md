@@ -3,6 +3,8 @@ layout: default
 title: USWDS Tutorial
 ---
 
+{% include banner.html %}
+
 <header class="opener">
   {% include hero.html %}
 </header>
